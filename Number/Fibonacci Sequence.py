@@ -18,10 +18,17 @@ import math
 
 
 def fibonacci(n):
-    values = [0,1]
-    for i in range(2,n+1):
-        fibonacci_value = values[i-1] + values[i-2]
-        values.append(fibonacci_value)
+    if n  == 0:
+        print("0")
+        exit()
+    elif n == 1:
+        print("0 , 1")
+        exit()
+    else:
+        values = [0,1]
+        for i in range(2,n+1):
+            fibonacci_value = values[i-1] + values[i-2]
+            values.append(fibonacci_value)
 
     print( ", ".join(map(str, values)))
 
